@@ -18,7 +18,8 @@ jobs:
           
          
        - name: Build Release APK
-         working-directory: /home/runner/work/exagear_windows_emulator/dolphin/Source/Android
+         working-directory: /home/runner/work/exagear_windows_emulator/exagear_windows_emulator/app
+   
          run: |
           chmod +x ./gradlew
           ./gradlew assembleRelease  --warning-mode=all
