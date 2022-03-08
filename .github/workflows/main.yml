@@ -14,7 +14,9 @@ jobs:
   #     - name: Install NDK
   #       run: echo "y" | sudo /usr/local/lib/android/sdk/tools/bin/sdkmanager --install "ndk;21.0.6113669" --sdk_root=$ANDROID_SDK_ROOT
           
-         
+       - name: find gradle
+         run: find / -type f -name "gradlew"
+
        - name: Build Release APK
          working-directory: /home/runner/work/exagear_windows_emulator/exagear_windows_emulator/app/
    
