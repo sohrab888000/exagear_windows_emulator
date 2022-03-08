@@ -11,12 +11,12 @@ jobs:
          uses: actions/checkout@v2
        - name: Checkout submodules
          run: git submodule update --init --recursive
-       - name: Install NDK
-         run: echo "y" | sudo /usr/local/lib/android/sdk/tools/bin/sdkmanager --install "ndk;21.0.6113669" --sdk_root=$ANDROID_SDK_ROOT
+  #     - name: Install NDK
+  #       run: echo "y" | sudo /usr/local/lib/android/sdk/tools/bin/sdkmanager --install "ndk;21.0.6113669" --sdk_root=$ANDROID_SDK_ROOT
           
          
        - name: Build Release APK
-         working-directory: /home/runner/work/exagear_windows_emulator/exagear_windows_emulator/app
+         working-directory: /home/runner/work/exagear_windows_emulator/exagear_windows_emulator/app/
    
          run: |
           chmod +x ./gradlew
